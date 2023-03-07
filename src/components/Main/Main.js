@@ -2,7 +2,6 @@ import React from "react";
 import './Main.css';
 import Navigation from "../Navigation/Navigation";
 
-
 function Main() {
   return (
     <section className="main">
@@ -30,9 +29,7 @@ function Main() {
             Будет котик и грибочек<br></br>
             С миллионом роз встречать!
           </p>
-
         </div>
-
       </div>
     </section>
   );

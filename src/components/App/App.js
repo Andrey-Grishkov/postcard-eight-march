@@ -4,6 +4,7 @@ import Main from "../Main/Main"
 import { Route, Routes } from "react-router-dom";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
+import FotoBook from "../FotoBook/FotoBook";
 
 function App() {
   return (
@@ -24,7 +25,7 @@ function App() {
         </ul>
         <Routes>
           <Route exact path="/" element={<Main />}></Route>
-          <Route exact path="/about-team" element={<p>Sluga </p>}></Route>
+          <Route exact path="/about-team" element={<FotoBook />}></Route>
         </Routes>
         <Footer/>
       </div>
