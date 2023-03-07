@@ -1,0 +1,19 @@
+.footer {
+    width: 100%;
+    height: 5vh;
+    border: red 1px solid;
+    position: absolute;
+    bottom: 0;
+    overflow: visible;
+}
+
+.footer__image {
+    position: absolute;
+    bottom: 0;
+    height: 23vh;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}

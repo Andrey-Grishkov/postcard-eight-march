@@ -1,0 +1,13 @@
+.header {
+    width: 100%;
+    height: 5vh;
+    border: red 1px solid;
+    position: relative;
+}
+
+.header__image {
+    top: 0;
+    width: 30%;
+    height: 55vh;
+    position: absolute;
+}
