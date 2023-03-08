@@ -10,3 +10,25 @@
     height: 55vh;
     position: absolute;
 }
+
+.header__link {
+    position: absolute;
+    display: none;
+    font-size: 22px;
+    font-weight: 600;
+    z-index: 3;
+    top: 2vh;
+    right: 10vw;
+    text-decoration: none;
+    color: #710836;
+}
+
+.header__link_visible {
+    display: block;
+    cursor: pointer;
+}
+
+.header__link_visible:hover {
+    text-decoration: underline;
+    color: blue;
+}

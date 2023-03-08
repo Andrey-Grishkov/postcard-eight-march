@@ -5,8 +5,23 @@ import { Route, Routes } from "react-router-dom";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import FotoBook from "../FotoBook/FotoBook";
+import ImagePopup from "../ImagePopap/ImagePopap";
 
 function App() {
+  const [selectedCard, setSelectedCard] = React.useState(null);
+  const [isOpenImage, setIsOpenImage] = React.useState(false);
+
+  function handleCardClick(foto) {
+    setSelectedCard(foto);
+    setIsOpenImage(true);
+  };
+
+  console.log(selectedCard, 'selectedCard')
+
+  const closeAllPopups = () => {
+    setIsOpenImage(false);
+  };
+
   return (
     <div className="page">
       <div className="area">
@@ -25,9 +40,18 @@ function App() {
         </ul>
         <Routes>
           <Route exact path="/" element={<Main />}></Route>
-          <Route exact path="/about-team" element={<FotoBook />}></Route>
+          <Route exact path="/about-team" element={
+            <FotoBook
+              onCardClick={handleCardClick}
+            />}></Route>
         </Routes>
         <Footer/>
+        <ImagePopup
+          isOpen={isOpenImage}
+          name={selectedCard && selectedCard.description}
+          link={selectedCard && selectedCard.img}
+          onClose={closeAllPopups}
+        />
       </div>
     </div>
   );
