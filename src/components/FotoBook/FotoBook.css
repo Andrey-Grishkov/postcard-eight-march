@@ -2,7 +2,6 @@
     margin: 0 auto;
     width: 80%;
     height: 80%;
-    border: black 1px solid;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -33,7 +32,6 @@
     row-gap: 1vh;
     column-gap: 1.2vw;
     justify-content: center;
-    border: yellow 1px solid;
 }
 
 .foto-book__item-container {

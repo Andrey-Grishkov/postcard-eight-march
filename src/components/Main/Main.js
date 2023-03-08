@@ -2,10 +2,10 @@ import React from "react";
 import './Main.css';
 import Navigation from "../Navigation/Navigation";
 
-function Main() {
+function Main({handleClickNavigation}) {
   return (
     <section className="main">
-          <Navigation/>
+          <Navigation handleClickNavigation={handleClickNavigation}/>
       <div className="main__content">
         <div className="main__img">
           <p className="main__heart-text">С восьмым

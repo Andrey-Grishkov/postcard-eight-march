@@ -10,13 +10,20 @@ import ImagePopup from "../ImagePopap/ImagePopap";
 function App() {
   const [selectedCard, setSelectedCard] = React.useState(null);
   const [isOpenImage, setIsOpenImage] = React.useState(false);
+  const [flag, setFlag] = React.useState(null);
+
+
+
+  function handleClickNavigation(foto) {
+    console.log(foto);
+    setFlag(foto);
+  };
+
 
   function handleCardClick(foto) {
     setSelectedCard(foto);
     setIsOpenImage(true);
   };
-
-  console.log(selectedCard, 'selectedCard')
 
   const closeAllPopups = () => {
     setIsOpenImage(false);
@@ -39,10 +46,14 @@ function App() {
           <li></li>
         </ul>
         <Routes>
-          <Route exact path="/" element={<Main />}></Route>
+          <Route exact path="/" element={
+            <Main
+              handleClickNavigation={handleClickNavigation}
+            />}></Route>
           <Route exact path="/about-team" element={
             <FotoBook
               onCardClick={handleCardClick}
+              flag={flag}
             />}></Route>
         </Routes>
         <Footer/>
